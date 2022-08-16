@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SEE U SOON-MENU</title>
+    <!--css연결-->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!--Banger font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bangers&family=Koulen&family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap"
+        rel="stylesheet">
+    <!--noto sans-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bangers&family=Koulen&family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap"
+        rel="stylesheet">
+    <!--tab메뉴 넣기-->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+
+            $('.tab .tabs a').on('click', function () { // 탭메뉴에 있는 링크를 클릭했을때
+                var idx = $(this).parent().index(); // 현재 클릭한 링크의 부모가 몇번째 인지 idx 변수에 넣는다.
+
+                $(this).parent().siblings().removeClass('on'); // 현재 클릭한 링크의 부모를 제외 한 나머지 li에 on클래스를 제거하고
+                $(this).parent().addClass('on'); // 현재 클릭한 링크의 부모 li에 on클래스 넣는다.
+
+                $(this).parent().parent().siblings('.tab_con').removeClass('on');
+                // 현재 클릭한 부모 li의 부모 ul을 제외한 나머지 클래스 .tab_con에 클래스 on을 지워준다.
+
+                $(this).parent().parent().siblings('.tab_con').eq(idx).addClass('on');
+                // 현재 클릭한 부모 li의 부모 ul을 제외한 나머지 클래스 .tab_con을 선택하고 그중 eq번째에 클래스 on을 넣는다.
+
+            });
+
+        });
+    </script>
+</head>
+
+<body>
+    <!--nav-->
+    <div id="nav">
+        <div class="nav_inner">
+            <a href="../main/index.html" class="logo"> <img src="images/top_logo.png" alt="nav로고"></a>
+            <ul>
+                <li><a href="#none">ABOUT</a></li>
+                <li><a href="#none">MENU</a></li>
+                <li><a href="#none">CONTENTS</a></li>
+                <li><a href="#none">STORE</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!--banner-->
+    <div id="banner">
+        <img src="images/banner.jpg" alt="메인배너">
+    </div>
+
+
+    <!--tab메뉴 꾸미기-->
+    <div id="menu">
+        <h1>MENU</h1>
+        <h3>찾으시는 메뉴를 클릭해서 확인해보세요!</h3>
+        <div class="tab">
+            <ul class="tabs type1">
+                <li class="tab1"><a href="#a">
+                        <div class="bar coffee">
+                            <img src="images/coffee.png" alt="커피" class="bar_nav">
+                            <p>Coffee</p>
+                        </div>
+                    </a></li>
+                <li class="tab2"><a href="#a">
+                        <div class="bar tea">
+                            <img src="images/tea.png" alt="티" class="bar_nav">
+                            <p>Tea&Ade</p>
+                        </div>
+                    </a></li>
+                <li class="tab3"><a href="#a">
+                        <div class="bar dessert">
+                            <img src="images/dessert.png" alt="디저트" class="bar_nav">
+                            <p>Dessert</p>
+                        </div>
+                    </a></li>
+                <li class="tab4"><a href="#a">
+                        <div class="bar goods">
+                            <img src="images/goods.png" alt="굿즈" class="bar_nav">
+                            <p>Coffee</p>
+                        </div>
+                    </a></li>
+            </ul>
+            <div class="tab_con on">
+                <ul class="coffee_menu">
+                    <li><a href="#">
+                            <div class="hidden"><img src="images/coffee1.jpg" alt="커피1"></div></a>
+                        <p>
+                            아메리카노 <br>
+                            Americano
+                        </p>
+                    </li>
+                    <li><a href="#">
+                            <div class="hidden"><img src="images/coffee2.jpg" alt="커피2"></div></a>
+                        <p>
+                            바닐라라떼<br>
+                            Vanilla Latte
+                        </p>
+                    </li>
+                    <li><a href="#">
+                            <div class="hidden"><img src="images/coffee3.jpg" alt="커피3"></div></a>
+                        <p>
+                            돌체라떼<br>
+                            Americano
+                        </p>
+                    </li>
+                    <li><a href="#">
+                            <div class="hidden"><img src="images/coffee4.jpg" alt="커피4"></div></a>
+                        <p>
+                            카라멜 마키아또<br>
+                            Caramel Macchiato
+                        </p>
+                    </li>
+                    <li><a href="#">
+                            <div class="hidden"><img src="images/coffee5.jpg" alt="커피5"></div></a>
+                        <p>
+                            비엔나 크림 커피<br>
+                            Vienna Cream Coffee
+                        </p>
+                    </li>
+                    <li><a href="#">
+                            <div class="hidden"><img src="images/coffee6.jpg" alt="커피6"></div></a>
+                        <p>
+                            크림 콜드브루<br>
+                            Cream Cold Brew
+                        </p>
+                    </li>
+                    <li><a href="#">
+                            <div class="hidden"><img src="images/coffee7.jpg" alt="커피7"></div></a>
+                        <p>
+                            아이스크림 라떼<br>
+                            Ice Cream Latte
+                        </p>
+                    </li>
+                    <li><a href="#">
+                            <div class="hidden"><img src="images/coffee8.jpg" alt="커피8"></div></a>
+                        <p>
+                            아이스 카페 모카<br>
+                            Iced Caffe Mocha
+                        </p>
+                    </li>
+                    <li><a href="#">
+                           <div class="hidden"> <img src="images/coffee9.jpg" alt="커피9"></div></a>
+                        <p>
+                            달고나 라떼<br>
+                            Dalgona Latte
+                        </p>
+                    </li>
+                    <li><a href="#">
+                            <div class="hidden"><img src="images/coffee10.jpg" alt="커피10"></div></a>
+                        <p>
+                            슈크림 라떼<br>
+                            Custard Cream Latte
+                        </p>
+                    </li>
+                </ul>
+            </div>
+            <div class="tab_con">
+                <ul class="tea_menu">
+                    <li><a href="#">
+                            <div class="hidden"><img src="images/tea1.jpg" alt="티1"></div></a>
+                        <p>
+                            캐모마일 <br>
+                            Chamomile
+                        </p>
+                    </li>
+                    <li><a href="#">
+                            <div class="hidden"><img src="images/tea2.jpg" alt="티2"></div></a>
+                        <p>
+                            히비스커스<br>
+                            Hibiscus
+                        </p>
+                    </li>
+                    <li><a href="#">
+                            <div class="hidden"><img src="images/tea3.jpg" alt="티3"></div></a>
+                        <p>
+                            오렌지 파인애플 에이드<br>
+                            Orange Pineapple Ade
+                        </p>
+                    </li>
+                    <li><a href="#">
+                            <div class="hidden"><img src="images/tea4.jpg" alt="티4"></div></a>
+                        <p>
+                            블루 과일 에이드<br>
+                            Blue Fruit Ade
+                        </p>
+                    </li>
+                    <li><a href="#">
+                            <div class="hidden"><img src="images/tea5.jpg" alt="티5"></div></a>
+                        <p>
+                            블랙 우롱티<br>
+                            Black Wulong Tea
+                        </p>
+                    </li>
+                    <li><a href="#">
+                            <div class="hidden"><img src="images/tea6.jpg" alt="티6"></div></a>
+                        <p>
+                            밀크티<br>
+                            Milk Tea
+                        </p>
+                    </li>
+                    <li><a href="#">
+                            <div class="hidden"><img src="images/tea7.jpg" alt="티7"></div></a>
+                        <p>
+                            레몬 민트티<br>
+                            Lemon Mint Tea
+                        </p>
+                    </li>
+                    <li><a href="#">
+                            <div class="hidden"><img src="images/tea8.jpg" alt="티8"></div></a>
+                        <p>
+                            라임 에이드<br>
+                            Lime Ade
+                        </p>
+                    </li>
+                    <li><a href="#">
+                            <div class="hidden"><img src="images/tea9.jpg" alt="티9"></div></a>
+                        <p>
+                            딸기 레몬 에이드<br>
+                            Strawberry Lemon Ade
+                        </p>
+                    </li>
+                    <li><a href="#">
+                            <div class="hidden"><img src="images/tea10.jpg" alt="티10"></div></a>
+                        <p>
+                            자몽 민트 에이드<br>
+                            Grapefruit Mint Ade
+                        </p>
+                    </li>
+                </ul>
+            </div>
+            <div class="tab_con">
+                <ul class="dessert_menu">
+                    <li><a href="#">
+                            <div class="hidden"><img src="images/dessert1.jpg" alt="디저트1"></div></a>
+                        <p>
+                            에그타르트 <br>
+                            Eggtart
+                        </p>
+                    </li>
+                    <li><a href="#">
+                            <div class="hidden"><img src="images/dessert2.jpg" alt="디저트2"></div></a>
+                        <p>
+                            쫀득한 초코 브라우니<br>
+                            Chocolate Brownie
+                        </p>
+                    </li>
+                    <li><a href="#">
+                            <div class="hidden"><img src="images/dessert3.jpg" alt="디저트3"></div></a>
+                        <p>
+                            견과류 듬뿍 초코쿠키<br>
+                            Peanut Chocolate Cookie
+                        </p>
+                    </li>
+                    <li><a href="#">
+                            <div class="hidden"><img src="images/dessert4.jpg" alt="디저트4"></div></a>
+                            <p>
+                                체리 슈크림 컵케이크<br>
+                                Cherry Custard Cream Cake
+                            </p>
+                    </li>
+                    <li><a href="#">
+                        <div class="hidden"><img src="images/dessert5.jpg" alt="디저트5"></div></a>
+                        <p>
+                            바삭한 크로플 <br>
+                            Croiffle
+                        </p>
+                    </li>
+                    <li><a href="#">
+                        <div class="hidden"><img src="images/dessert6.jpg" alt="디저트6"></div></a>
+                        <p>
+                            페레로로쉐 컵케이크 <br>
+                            Ferrero Rocher Cake
+                        </p>
+                    </li>
+                </ul>
+            </div>
+            <div class="tab_con">
+                <ul class="goods_menu">
+                    <li><a href="#">
+                            <div class="hidden"><img src="images/goods1.jpg" alt="굿즈1"></div>
+                        </a>
+                        <p>
+                            꽃모양 스티커 <br>
+                            Flower Type Sticker
+                        </p>
+                    </li>
+                    <li><a href="#">
+                            <div class="hidden"><img src="images/goods2.jpg" alt="굿즈2"></div>
+                        </a>
+                        <p>
+                            다이어리<br>
+                            Diary
+                        </p>
+                    </li>
+                    <li><a href="#">
+                            <div class="hidden"><img src="images/goods3.jpg" alt="굿즈3"></div>
+                        </a>
+                        <p>
+                            머그컵<br>
+                            Mug Cup
+                        </p>
+                    </li>
+                    <li><a href="#">
+                            <div class="hidden"><img src="images/goods4.jpg" alt="굿즈4"></div>
+                        </a>
+                        <p>
+                            볼펜(5color)<br>
+                            Ball Pen
+                        </p>
+                    </li>
+                    <li><a href="#">
+                            <div class="hidden"><img src="images/goods5.jpg" alt="굿즈5"></div>
+                        </a>
+                        <p>
+                            손수건<br>
+                            Handkerchief
+                        </p>
+                    </li>
+                    <li><a href="#">
+                            <div class="hidden"><img src="images/goods6.jpg" alt="굿즈6"></div>
+                        </a>
+                        <p>
+                            폰케이스 3종<br>
+                            Phone Cases
+                        </p>
+                    </li>
+                    <li><a href="#">
+                            <div class="hidden"><img src="images/goods7.jpg" alt="굿즈7"></div>
+                        </a>
+                        <p>
+                            메인&굿즈 핀<br>
+                            Pin
+                        </p>
+                    </li>
+                    <li><a href="#">
+                            <div class="hidden"><img src="images/goods8.jpg" alt="굿즈8"></div>
+                        </a>
+                        <p>
+                            에티오피아 마일드 아메리카노<br>
+                            <span>Ethiopia Mild Americano Pack</span>
+                        </p>
+                    </li>
+                    <li><a href="#">
+                            <div class="hidden"><img src="images/goods9.jpg" alt="굿즈9"></div>
+                        </a>
+                        <p>
+                            빨대 텀블러<br>
+                            Straw Tumbler
+                        </p>
+                    </li>
+                    <li><a href="#">
+                            <div class="hidden"><img src="images/goods10.jpg" alt="굿즈10"></div>
+                        </a>
+                        <p>
+                            SS 미니 캘린더<br>
+                            SS Mini Calendar
+                        </p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!--상품후기-->
+    <div class="review">
+        <img src="images/review.png" alt="상품후기사진">
+    </div>
+
+    <!--광고배너-->
+    <div class="ad">
+        <img src="images/mint.jpg" alt="자몽민트">
+        <img class="cherry" src="images/cherry.jpg" alt="체리">
+    </div>
+
+    <!--footer-->
+    <div id="footer">
+        <div class="footer_inner">
+            <ul class="text">
+                <li><a href="#">오시는 길</a></li>
+                <li><a href="#">제휴문의</a></li>
+                <li><a href="#">개인정보처리방침</a></li>
+                <li><a href="#">이용약관</a></li>
+                <li><a href="#">고객센터 1234-5678</a></li>
+            </ul>
+            <a href="#"><img src="images/mainlogo.png" alt="메인로고" class="mainlogo"></a>
+            <p>
+                부산광역시 보호동 1004-12 <span>WEB DESIGNER</span>박지원 <br>
+                Tel.051-123-4567 E-mail.n__mlki10@naver.com
+            </p>
+            <ul class="sns">
+                <ul>
+                    <li><a href="#"><img src="images/twitter.png" alt="트위터"></a></li>
+                    <li><a href="#"><img src="images/instar.png" alt="인스타">
+                    </a></li>
+                    <li><a href="#"><img src="images/youtube.png" alt="유튜브"></a></li>
+                    <li><a href="#"><img src="images/facebook.png" alt="페이스북"></a></li>
+                </ul>
+            </ul>
+        </div>
+    </div> 
+</body>
+
+</html>
